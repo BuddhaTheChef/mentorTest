@@ -2,40 +2,79 @@ Answer each question in a written format
 
 1. What does semantic HTML mean?
 
+    code you use in the page that contains metadata describing its purpose
+
 2. What is the box model?
+
+    while looking in the console you will notice a box model this is used when talking about the layout of your divs whether it
+    be the content you are putting in it is margin, padding, border, etc.
 
 3. What is the difference between IDs and Classes?
 
+    Id is used as a #name while class uses .name in a css file, both are ways of defining a element on the page but id takes precedence
+    over class and is more important. usually you would want to call id  for one thing while clasess can be used alot more.
+
 4. What does the z-index do?
+
+    z-index is a way you can apply conent to stack on eachother the more positive the number the higher on the stack they are and
+    if the number is negative the more behind that content goes, when I used it, it typically only works with the position: absolute
+    as another style in the class.
 
 5. Summarize what the keyword 'this' is used for?
 
+    outside of a function 'this' would be used to refer to the window while a 'this' in a function is whatever that value is equal to in
+    the function its usually used to evaluate to a value that is being executed in a function.
+
 6. What is a callback?
+
+    A callback is passed as an argument from function to function which is later returned after something is done with it.
 
 7. What is a closure?
 
+    A closure gives you access to an outer function’s scope from an inner function. But the parent function cant look within the child function
+
 8. How does prototype work?
+
+    Objects created  wit the "new Object()" get a prototype method the way i know this personally works is using the constructor function
+    setting the value to a parameter that is passed in.
 
 9. What is MVC?
 
+    Model view controller, which is a way you set up an app to make it into three components (MODEL, VIEW & CONTROLLER).
+
 10. What is the component lifecycle?
+
+    Code you can run at diffrent times in the process. "will" is called before something happens, "did" is called right after something
 
 11. What is REST?
 
+    It stands for representational state transfer but what that really is saying is that its a way for the api to get endpoints in a way
+    that you can understand using CRUD operations.
+
 12. Name three ways of getting data from the URL using express
 
-create table users (
-id serial,
-name varchar(255),
-email varchar(255)
-)
+    (1.req.params,2. req.query,3. req.body)
+
+    create table users (
+    id serial,
+    name varchar(255),
+    email varchar(255)
+    )
 
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
 
+   SELECT * FROM users;
+
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+
+   INSERT INTO users(name,email) VALUES('your name','fake@fake.com');
 
 -Update the newly created user's name to 'Bobby Boy':
 
+   UPDATE users SET name = 'Bobby Boy' WHERE name = 'your name';
+
 -Delete the newly updated user:
+
+   DELETE FROM users where name = 'Bobby Boy';
